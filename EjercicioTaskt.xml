@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Commands>
+    <ScriptAction>
+      <ScriptCommand xsi:type="ExcelCreateApplicationCommand" CommandID="e16c17bc-f439-4c8f-b8c7-270a234e8e19" CommandName="ExcelOpenApplicationCommand" IsCommented="false" SelectionName="Create Excel Application" DefaultPause="0" LineNumber="1" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="excel" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="ExcelOpenWorkbookCommand" CommandID="494469dd-4d59-4022-ac4b-2c684268b7ed" CommandName="ExcelOpenWorkbookCommand" IsCommented="false" SelectionName="Open Workbook" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="excel" v_FilePath="C:\Users\ricau\OneDrive\Documentos\TECLAB\16_PRÁCTICA PROFESIONALIZANTE 1\PWC\TASKT\EJERCICIO\EjercicioTaskt.xlsx" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="AddVariableCommand" CommandID="f3083cc5-7ee7-47d7-ac28-de6f7b89b41a" CommandName="AddVariableCommand" IsCommented="false" SelectionName="New Variable" DefaultPause="0" LineNumber="3" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="calle&#xD;&#xA;calle" v_Input="0" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="AddVariableCommand" CommandID="0dccf591-8dd8-49d1-846e-4449f79dee56" CommandName="AddVariableCommand" IsCommented="false" SelectionName="New Variable" DefaultPause="0" LineNumber="4" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="altura" v_Input="0" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="AddVariableCommand" CommandID="9a0ffde0-8617-4734-96fb-9a94f434a1e2" CommandName="AddVariableCommand" IsCommented="false" SelectionName="New Variable" DefaultPause="0" LineNumber="5" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="fila" v_Input="1" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="ExcelGetLastRowCommand" CommandID="5e791b5a-fe45-4dfa-b5c5-aafd82db5541" CommandName="ExcelGetLastRowCommand" IsCommented="false" SelectionName="Get Last Row Index" DefaultPause="0" LineNumber="6" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="excel" v_ColumnLetter="A" v_applyToVariableName="UltimaFila" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="BeginNumberOfTimesLoopCommand" CommandID="e7a40b6a-acf0-48a7-926d-4ed29206db85" CommandName="BeginNumberOfTimesLoopCommand" IsCommented="false" SelectionName="Loop Number Of Times" DefaultPause="0" LineNumber="7" PauseBeforeExeucution="false" CommandEnabled="true" v_LoopParameter="{UltimaFila}-1" v_LoopStart="0" />
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="VariableCommand" CommandID="156c7001-7c48-42ca-bb39-2b922f83405c" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="8" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="fila" v_Input="{fila}+1" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="ExcelGetCellCommand" CommandID="ec1c5072-5577-4230-b5ad-eb2e371ebfe5" CommandName="ExcelGetCellCommand" IsCommented="false" SelectionName="Get Cell" DefaultPause="0" LineNumber="9" PauseBeforeExeucution="false" v_Comment="" CommandEnabled="true" v_InstanceName="excel" v_ExcelCellAddress="A{fila}" v_userVariableName="calle" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="ExcelGetCellCommand" CommandID="107a28f6-1a4d-41d7-a993-4daca0f5302f" CommandName="ExcelGetCellCommand" IsCommented="false" SelectionName="Get Cell" DefaultPause="0" LineNumber="10" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="excel" v_ExcelCellAddress="B{fila}" v_userVariableName="altura" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="ExcelSetCellCommand" CommandID="4e61274e-9d10-42e0-aa9b-1097f22b47d0" CommandName="ExcelSetCellCommand" IsCommented="false" SelectionName="Set Cell" DefaultPause="0" LineNumber="11" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="excel" v_TextToSet="{calle}-{altura}" v_ExcelCellAddress="C{fila}" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="BeginIfCommand" CommandID="402d26a1-952a-4efc-a146-7797c2f9376b" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="12" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Value">
+          <v_IfActionParameterTable>
+            <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+              <xs:element name="I2AcpionPara44Table062022.064435">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Parameter_x0020_Name" type="xs:string" minOccurs="0" />
+                    <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I2AcpionPara44Table062022.064435" msdata:UseCurrentLocale="true">
+                <xs:complexType>
+                  <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="I2AcpionPara44Table062022.064435" />
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+            </xs:schema>
+            <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+              <DocumentElement>
+                <I2AcpionPara44Table062022.064435 diffgr:id="I2AcpionPara44Table062022.0644351" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+                  <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>{altura}</Parameter_x0020_Value>
+                </I2AcpionPara44Table062022.064435>
+                <I2AcpionPara44Table062022.064435 diffgr:id="I2AcpionPara44Table062022.0644352" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+                  <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>is greater than</Parameter_x0020_Value>
+                </I2AcpionPara44Table062022.064435>
+                <I2AcpionPara44Table062022.064435 diffgr:id="I2AcpionPara44Table062022.0644353" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+                  <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>500</Parameter_x0020_Value>
+                </I2AcpionPara44Table062022.064435>
+              </DocumentElement>
+            </diffgr:diffgram>
+          </v_IfActionParameterTable>
+        </ScriptCommand>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="ExcelSetCellCommand" CommandID="79dfe9e2-acb9-43fd-a96f-a2ce1576c77e" CommandName="ExcelSetCellCommand" IsCommented="false" SelectionName="Set Cell" DefaultPause="0" LineNumber="13" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="excel" v_TextToSet="Mayor" v_ExcelCellAddress="D{fila}" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="ElseCommand" CommandID="34386676-31e4-49f4-806d-447ca2c669e6" CommandName="ElseCommand" IsCommented="false" SelectionName="Else" DefaultPause="0" LineNumber="14" PauseBeforeExeucution="false" CommandEnabled="true" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="ExcelSetCellCommand" CommandID="3ff3b522-ed8d-4887-87df-a7d76a446d7a" CommandName="ExcelSetCellCommand" IsCommented="false" SelectionName="Set Cell" DefaultPause="0" LineNumber="15" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="excel" v_TextToSet="Menor" v_ExcelCellAddress="D{fila}" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="EndIfCommand" CommandID="c7bab541-410c-412c-bae5-2a6f20e6711f" CommandName="EndIfCommand" IsCommented="false" SelectionName="End If" DefaultPause="0" LineNumber="16" PauseBeforeExeucution="false" CommandEnabled="true" />
+        </AdditionalScriptCommands>
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="EndLoopCommand" CommandID="e852f13c-dc24-43dc-9c52-ad4779322aaf" CommandName="EndLoopCommand" IsCommented="false" SelectionName="End Loop" DefaultPause="0" LineNumber="17" PauseBeforeExeucution="false" CommandEnabled="true" />
+      </AdditionalScriptCommands>
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="ExcelSaveCommand" CommandID="7fdf2445-ceb8-4a4c-b2e3-9facaf2b78b8" CommandName="ExcelSaveCommand" IsCommented="false" SelectionName="Save Workbook" DefaultPause="0" LineNumber="18" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="excel" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="ExcelCloseApplicationCommand" CommandID="d428b077-aa5b-48cf-8c82-c5a733c3c166" CommandName="ExcelCloseApplicationCommand" IsCommented="false" SelectionName="Close Excel Application" DefaultPause="0" LineNumber="19" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="excel" v_ExcelSaveOnExit="false" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="MessageBoxCommand" CommandID="0736d992-8ef7-4b6e-8ef0-cf628a38e35c" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Show Message" DefaultPause="0" LineNumber="20" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="proceso finalizado" v_AutoCloseAfter="3" />
+    </ScriptAction>
+  </Commands>
+  <Variables />
+</Script>
